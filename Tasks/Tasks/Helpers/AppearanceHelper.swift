@@ -22,24 +22,26 @@ enum AppearanceHelper {
             return font
     }
     
-//    static func setGradient(colorOne: UIColor, colorTwo: UIcolor) {
+//    static func setGradient(colorOne: UIColor, colorTwo: UIColor) {
 //        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = bounds
+//        gradientLayer.frame = view.bounds
 //        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
 //        gradientLayer.locations = [0.0, 1.0]
 //        gradientLayer.startPoint = CGPoint(x:1.0, y: 1.0)
 //        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
 //
-//       layer.insertSublayer(gradientLayer, at: 0)
+//        view.layer.insertSublayer(gradientLayer, at: 0)
 //    }
 //
     static func setThemeAppearance() {
         
-        let textFont = [NSAttributedString.Key.font: domesticMannersFont(pointSize: 30)]
-        UINavigationBar.appearance().largeTitleTextAttributes = textFont
+//        let textFont = [NSAttributedString.Key.font: beyondWonderlandFont(pointSize: 30)]
+//        UINavigationBar.appearance().largeTitleTextAttributes = textFont
+//        UINavigationBar.appearance().titleTextAttributes = textFont
         
          UINavigationBar.appearance().barTintColor = .black
-           let textAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+           let textAttributes = [NSAttributedString.Key.foregroundColor: titleColor,
+                NSAttributedString.Key.font: beyondWonderlandFont(pointSize: 100)                 ]
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UITextField.appearance().tintColor = .gray
         UITextView.appearance().tintColor = .gray
@@ -62,3 +64,5 @@ enum AppearanceHelper {
 
 /* You may specify the font, text color, and shadow properties for the large title in the text attributes dictionary, using the keys found in NSAttributedString.h.
  */
+
+
