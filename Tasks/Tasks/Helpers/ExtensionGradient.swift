@@ -10,13 +10,13 @@
 //extension UIView {
 //    static func setGradient(colorOne: UIColor, colorTwo: UIColor) {
 //        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = self.view.bounds
+//        gradientLayer.frame = view.bounds
 //        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
 //        gradientLayer.locations = [0.0, 1.0]
 //        gradientLayer.startPoint = CGPoint(x:1.0, y: 1.0)
 //        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
 //
 ////        layer.insertSublayer(gradientLayer, at: 0)
-//        self.view.layer.addSublayer(gradientLayer)
+//        view.layer.addSublayer(gradientLayer)
 //    }
 //}
