@@ -22,16 +22,18 @@ enum AppearanceHelper {
             return font
     }
     
-//    static func setGradient(colorOne: UIColor, colorTwo: UIColor) {
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = view.bounds
-//        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
-//        gradientLayer.locations = [0.0, 1.0]
-//        gradientLayer.startPoint = CGPoint(x:1.0, y: 1.0)
-//        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
-//
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
+    static func setGradient(colorOne: UIColor, colorTwo: UIColor, view: UIView) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x:1.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
+
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+   
 //
     static func setThemeAppearance() {
         

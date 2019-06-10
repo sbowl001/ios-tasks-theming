@@ -73,6 +73,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8s-Xy-j6H">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" red="1" green="0.32696393439999999" blue="0.14401389959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZV9-3B-KBS">
                                 <rect key="frame" x="16" y="136" width="343" height="511"/>
                                 <subviews>
@@ -131,8 +135,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PG6-rD-Oga" firstAttribute="bottom" secondItem="w8s-Xy-j6H" secondAttribute="bottom" id="5kC-h5-oF0"/>
+                            <constraint firstItem="PG6-rD-Oga" firstAttribute="trailing" secondItem="w8s-Xy-j6H" secondAttribute="trailing" id="ISP-0O-fWN"/>
                             <constraint firstItem="PG6-rD-Oga" firstAttribute="bottom" secondItem="ZV9-3B-KBS" secondAttribute="bottom" constant="20" id="Jjg-vl-dNv"/>
+                            <constraint firstItem="w8s-Xy-j6H" firstAttribute="leading" secondItem="PG6-rD-Oga" secondAttribute="leading" id="K3i-n6-9n5"/>
                             <constraint firstItem="ZV9-3B-KBS" firstAttribute="leading" secondItem="PG6-rD-Oga" secondAttribute="leading" constant="16" id="UuD-aL-YRv"/>
+                            <constraint firstItem="w8s-Xy-j6H" firstAttribute="top" secondItem="PG6-rD-Oga" secondAttribute="top" id="Xzl-Oe-rbe"/>
                             <constraint firstItem="PG6-rD-Oga" firstAttribute="trailing" secondItem="ZV9-3B-KBS" secondAttribute="trailing" constant="16" id="tLB-8k-oUr"/>
                             <constraint firstItem="ZV9-3B-KBS" firstAttribute="top" secondItem="PG6-rD-Oga" secondAttribute="top" constant="20" id="tZk-bT-7ue"/>
                         </constraints>
@@ -146,6 +154,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="gradientView" destination="w8s-Xy-j6H" id="KKc-hV-9o4"/>
                         <outlet property="nameTextField" destination="QoX-Lu-hGg" id="zXv-1m-WVN"/>
                         <outlet property="notesTextView" destination="0Ff-ma-Dqn" id="rQ9-5a-buS"/>
                         <outlet property="priorityControl" destination="UUk-vn-i5S" id="Fpc-rO-bng"/>

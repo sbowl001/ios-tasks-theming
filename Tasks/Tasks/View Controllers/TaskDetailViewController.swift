@@ -10,11 +10,13 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+    @IBOutlet weak var gradientView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateViews()
-        createGradientLayer()
+//        createGradientLayer()
+        AppearanceHelper.setGradient(colorOne: .black, colorTwo: .gray, view: gradientView)
     }
 
     
@@ -78,7 +80,8 @@ class TaskDetailViewController: UIViewController {
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.startPoint = CGPoint(x:1.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
-        self.view.layer.addSublayer(gradientLayer)
+//         self.view.layer.addSublayer(gradientLayer)
+        gradientView.layer.addSublayer(gradientLayer)
     }
 }
 
